@@ -22,5 +22,13 @@ public class CustomerRepository {
 	public Collection<Customer> getCustomers(){
 		return db.values();
 	}
+	public int insertCustomer(Customer customer) {
+		try {
+			db.put(customer.getId(), customer);
+		} catch (Exception e) {
+			return 0;
+		}
+		return 1;
+	}
 }
 

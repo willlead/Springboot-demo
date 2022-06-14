@@ -12,6 +12,7 @@ import springfox.documentation.spring.web.plugins.Docket;
 public class SwaggerConfig {
 	@Bean
 	public Docket api() {
+		//http://localhost:8888/swagger-ui.html
 		return new Docket(DocumentationType.SWAGGER_2)
 				.select()
 				.apis(RequestHandlerSelectors.basePackage("com.example.demo.controller"))

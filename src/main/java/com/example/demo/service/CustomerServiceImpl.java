@@ -14,6 +14,7 @@ public class CustomerServiceImpl implements CustomerService {
 	@Autowired
 	CustomerRepository repository;
 
+	
 	@Override
 	public Customer getCustomerById(String cstmId) {
 		return repository.getCustomerById(cstmId);
@@ -22,6 +23,11 @@ public class CustomerServiceImpl implements CustomerService {
 	@Override
 	public Collection<Customer> getAllCustomers() {
 		return repository.getCustomers();
+	}
+
+	@Override
+	public int insertCustomer(Customer customer) {
+		return repository.insertCustomer(customer);
 	}
 
 }
