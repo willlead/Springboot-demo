@@ -2,6 +2,7 @@ package com.example.demo.service;
 
 import java.util.Collection;
 
+import org.apache.catalina.filters.CsrfPreventionFilter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -28,6 +29,11 @@ public class CustomerServiceImpl implements CustomerService {
 	@Override
 	public int insertCustomer(Customer customer) {
 		return repository.insertCustomer(customer);
+	}
+
+	@Override
+	public int deleteCustomer(String cstmId) {
+		return repository.deleteCustomer(cstmId);
 	}
 
 }

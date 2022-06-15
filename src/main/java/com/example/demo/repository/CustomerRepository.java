@@ -30,5 +30,12 @@ public class CustomerRepository {
 		}
 		return 1;
 	}
+	public int deleteCustomer(String cstmId) {
+		if(db.remove(cstmId) == null) {
+			return 0;
+		} else {
+			return 1;
+		}
+	}
 }
 

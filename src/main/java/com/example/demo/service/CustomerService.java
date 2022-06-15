@@ -8,4 +8,5 @@ public interface CustomerService {
 	Customer getCustomerById(String cstmId);
 	Collection<Customer> getAllCustomers();
 	int insertCustomer(Customer customer);
+	int deleteCustomer(String cstmId);
 }
